@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/top_enter_values_layoute"
+        android:layout_width="328dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12sp"
+        android:background="@drawable/custom_white_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/city_registration_layout"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Город регистрации собственника"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Мощность автомобиля"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Сколько водителей"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Возраст младшего из водителей"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Минимальный стаж водителей"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_gray_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Сколько лет не было аварий"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
