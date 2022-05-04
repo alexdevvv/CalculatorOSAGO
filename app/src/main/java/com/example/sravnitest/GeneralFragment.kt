@@ -17,8 +17,6 @@ class GeneralFragment : Fragment(R.layout.fragment_general) {
         super.onViewCreated(view, savedInstanceState)
         visibilityCalculateMenu()
 
-
-
     }
 
     private fun visibilityCalculateMenu() {
