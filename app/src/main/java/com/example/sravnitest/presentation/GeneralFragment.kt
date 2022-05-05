@@ -1,12 +1,11 @@
-package com.example.sravnitest
+package com.example.sravnitest.presentation
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.sravnitest.R
 import com.example.sravnitest.databinding.FragmentGeneralBinding
 
 class GeneralFragment : Fragment(R.layout.fragment_general) {

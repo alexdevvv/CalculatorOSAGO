@@ -1,8 +1,8 @@
-package com.example.sravnitest
+package com.example.sravnitest.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.Navigation
+import com.example.sravnitest.R
 
 class MainActivity : AppCompatActivity() {
 
