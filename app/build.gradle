@@ -35,8 +35,16 @@ android {
     }
 }
 
-ext {
+ext{
     vbPropertyDelegate = '1.5.0-beta01'
+    retrofit = "2.9.0"
+    rxandroid = "2.1.1"
+    converter_gson = "2.4.0"
+    rxjava = "2.2.9"
+    lifecycle = "2.4.0-rc01"
+    nav_comp = "2.3.5"
+    koin = "3.1.2"
+    room_version = "2.3.0"
 }
 
 dependencies {
@@ -54,6 +62,20 @@ dependencies {
 
     //ViewBinding
     implementation "com.github.kirich1409:viewbindingpropertydelegate:$vbPropertyDelegate"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$converter_gson"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+
+    //Koin
+    implementation "io.insert-koin:koin-core:$koin"
+    implementation "io.insert-koin:koin-android:$koin"
+    implementation "io.insert-koin:koin-android-compat:$koin"
 
 
 
