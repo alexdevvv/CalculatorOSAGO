@@ -27,6 +27,7 @@
                 android:layout_marginStart="10dp"
                 android:text="Город регистрации собственника"
                 android:textSize="16sp" />
+
         </LinearLayout>
 
 

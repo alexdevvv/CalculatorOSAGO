@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.kirich1409:viewbindingpropertydelegate:1.5.0-beta01@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ec89a71a15f5f347ade8bd70152618bf/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ec89a71a15f5f347ade8bd70152618bf/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ec89a71a15f5f347ade8bd70152618bf/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2360fa19620bd85b69e5a1a15e045bf7/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/16660e6b28f56c1dcddea61c99a1f5d2/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/16660e6b28f56c1dcddea61c99a1f5d2/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/16660e6b28f56c1dcddea61c99a1f5d2/transformed/jetified-viewbindingpropertydelegate-1.5.0-beta01/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

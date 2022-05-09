@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -76,8 +77,6 @@ dependencies {
     implementation "io.insert-koin:koin-core:$koin"
     implementation "io.insert-koin:koin-android:$koin"
     implementation "io.insert-koin:koin-android-compat:$koin"
-
-
 
 
 }
