@@ -9,5 +9,25 @@
         android:id="@+id/generalFragment"
         android:name="com.example.sravnitest.presentation.GeneralFragment"
         android:label="fragment_general"
-        tools:layout="@layout/fragment_general" />
+        tools:layout="@layout/fragment_general" >
+        <action
+            android:id="@+id/action_generalFragment_to_inputDialogFragment"
+            app:destination="@id/inputDialogFragment"
+            >
+            <argument
+                android:name="parameter"
+                app:argType="string"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/inputDialogFragment"
+        android:name="com.example.sravnitest.presentation.InputDialogFragment"
+        android:label="fragment_input_dialog"
+        tools:layout="@layout/fragment_input_dialog" >
+        <argument
+            android:name="parameter"
+            app:argType="string"
+            />
+    </fragment>
 </navigation>

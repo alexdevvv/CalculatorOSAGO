@@ -1,41 +1,62 @@
 package com.example.sravnitest.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.sravnitest.R
-import com.example.sravnitest.data.RetrofitClient
-import com.example.sravnitest.data.models.OffersData
 import com.example.sravnitest.databinding.FragmentGeneralBinding
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.observers.DisposableSingleObserver
-import io.reactivex.schedulers.Schedulers
-import retrofit2.Retrofit
-import java.util.*
-import javax.security.auth.callback.Callback
 
 class GeneralFragment : Fragment(R.layout.fragment_general) {
     private val binding: FragmentGeneralBinding by viewBinding()
     private var isVisibleMenu = false
-    lateinit var  viewModel: GeneralFragmentViewModel
-
+    lateinit var viewModel: GeneralFragmentViewModel
+    private lateinit var adapter: ArrayAdapter<String>
+    private lateinit var genStringArray: Array<String>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewModel = ViewModelProviders.of(this).get(GeneralFragmentViewModel::class.java)
         visibilityCalculateMenu()
-
-//        getDataFromServer()
-
+        genStringArray = resources.getStringArray(R.array.string_array_gen_user_dataLayout)
+        initAdapter()
+        initItemClickListenerForListView()
     }
 
+    private fun initAdapter(){
+        adapter = ArrayAdapter(requireContext(), R.layout.item_general_layout, R.id.text_view, genStringArray)
+        binding.listViewUserDataLayout.adapter = adapter
+    }
 
+    private fun initItemClickListenerForListView(){
+        binding.listViewUserDataLayout.setOnItemClickListener { adapterView, view, position, id ->
+           val arg =  selectedFun(position)
 
+            findNavController().navigate(
+                R.id.action_generalFragment_to_inputDialogFragment, bundleOf(
+                    Pair("parameter", arg)))
+        }
+    }
+
+    private fun selectedFun(position: Int): String{
+        var rsl = when(position){
+            0 -> "cityRegistration"
+            1 -> "powerCar"
+            2 -> "driversCount"
+            3 -> "minAge"
+            4 -> "minExperience"
+            5 -> "yearsNotIncident"
+            else -> Toast.makeText(requireContext(), "Ошибка выбора элемента", Toast.LENGTH_LONG).show()
+        }
+        return rsl.toString()
+    }
 
     private fun visibilityCalculateMenu() {
         binding.layout1.outlineExpandIv.setOnClickListener {
@@ -61,4 +82,17 @@ class GeneralFragment : Fragment(R.layout.fragment_general) {
             }
         }
     }
+
+
+//    fun listenerCityRegistrationButton() {
+//        binding.layout2.cityRegistrationLayout.setOnClickListener {
+//            findNavController().navigate(
+//                R.id.action_generalFragment_to_inputDialogFragment, bundleOf(
+//                    Pair("parameter", "cityRegistration")
+//                )
+//            )
+//        }
+//    }
+
+
 }

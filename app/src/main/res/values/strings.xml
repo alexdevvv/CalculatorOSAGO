@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">SravniTest</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="string_array_gen_user_dataLayout">
+        <item>Город регистрации собственника</item>
+        <item>Мощность автомобиля</item>
+        <item>Сколько водителей</item>
+        <item>Возраст младшего из водителей</item>
+        <item>Минимальный стаж водителей</item>
+        <item>Сколько лет не было аварий</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city_of_registaration">Город регистрации собственника</string>
+    <string name="power_car">Мощность автомобиля</string>
+    <string name="number_of_drivers">Сколько водителей</string>
+    <string name="age_of_the_youngest_friver">Возраст младшего из водителей</string>
+    <string name="min_experience_drivers">Минимальный стаж водителей</string>
+    <string name="count_years_no_accidents">Сколько лет не было аварий</string>
+    <string name="calculate_osago">Калькулятор ОСАГО</string>
 </resources>

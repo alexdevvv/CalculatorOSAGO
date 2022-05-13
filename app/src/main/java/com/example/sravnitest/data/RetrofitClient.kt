@@ -17,6 +17,5 @@ object RetrofitClient {
 
     val api: ApiService = getRetrofit().create(ApiService::class.java)
 
-
 }
 

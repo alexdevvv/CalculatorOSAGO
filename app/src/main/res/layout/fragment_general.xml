@@ -1,65 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="650dp"
-        android:background="@color/accent_blue_06">
 
-        <ScrollView
-            android:id="@+id/scrollView2"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="411dp"
+        android:layout_height="650dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="640dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="328dp"
+                android:layout_height="34dp"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/calculate_osago"
+                android:textColor="@color/black"
+
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/layout_1"
+                layout="@layout/general_calculate_layout" />
+
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:id="@+id/top_enter_values_layout"
+                android:layout_width="328dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12sp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/custom_white_background"
                 android:orientation="vertical">
 
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="328dp"
-                    android:layout_height="34dp"
-                    android:layout_margin="16dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Калькулятор ОСАГО"
-                    android:textColor="@color/black"
+                <ListView
+                    android:id="@+id/list_view_user_data_layout"
+                    android:layout_width="400dp"
+                    android:layout_height="485dp"
 
-                    android:textSize="28dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <include
-                    android:id="@+id/layout_1"
-                    layout="@layout/general_calculate_layout" />
-
-                <include
-                    android:id="@+id/layout_2"
-                    layout="@layout/general_user_data_layout" />
+                    android:divider="@null"
+                    android:padding="10dp" />
 
 
             </LinearLayout>
 
 
-        </ScrollView>
+        </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/layout_BT"
@@ -73,10 +88,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
                 android:text="РАССЧИТАТЬ ОСАГО"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -84,4 +99,5 @@
 
     </LinearLayout>
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
