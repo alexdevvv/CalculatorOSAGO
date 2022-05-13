@@ -3,7 +3,7 @@
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/top_enter_values_layoute"
+        android:id="@+id/top_enter_values_layout"
         android:layout_width="328dp"
         android:layout_height="400dp"
         android:layout_marginBottom="25dp"
@@ -25,7 +25,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Город регистрации собственника"
+                android:text="@string/city_of_registaration"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -43,7 +43,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Мощность автомобиля"
+                android:text="@string/power_car"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -60,7 +60,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Сколько водителей"
+                android:text="@string/number_of_drivers"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -77,7 +77,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Возраст младшего из водителей"
+                android:text="@string/age_of_the_youngest_friver"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -94,7 +94,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Минимальный стаж водителей"
+                android:text="@string/min_experience_drivers"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -111,7 +111,7 @@
                 android:layout_height="16dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="Сколько лет не было аварий"
+                android:text="@string/count_years_no_accidents"
                 android:textSize="15sp" />
         </LinearLayout>
 

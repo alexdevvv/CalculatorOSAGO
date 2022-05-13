@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="296dp"
+    android:layout_height="65dp">
+
+    <LinearLayout
+        android:id="@+id/city_registration_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_gray_background">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="some_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+

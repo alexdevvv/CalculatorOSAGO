@@ -10,9 +10,6 @@
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     >
 
-    <include
-        layout="@layout/general_user_data_layout"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="50dp" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
