@@ -16,37 +16,79 @@ class InputDialogFragment : Fragment(R.layout.fragment_input_dialog) {
     private val binding: FragmentInputDialogBinding by viewBinding()
     val navArgs by navArgs<InputDialogFragmentArgs>()
     var currentParameter = ""
-    var idFragment = 0
+    private var idFragment = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         currentParameter = navArgs.parameter
         initDataFragment(currentParameter)
+        idFragment = changeIndexToCurrentParameter(currentParameter)
         initNextButton()
 
     }
 
-    private fun initNextButton(){
-        binding.nextBt.setOnClickListener{
-            saveUserDataToModel(currentParameter)
+    // Определяем фрагмент по индексу
+    fun changeCurrentParameterToIndex(index: Int): String {
+        var args = when (index) {
+            0 -> "cityRegistration"
+            1 -> "powerCar"
+            2 -> "driversCount"
+            3 -> "minAge"
+            4 -> "minExperience"
+            5 -> "yearsNotIncident"
+            else -> 0
+        }
+        return args.toString()
+    }
 
+    // Определяем индекс в зависимости от пришедшего аргумента
+    fun changeIndexToCurrentParameter(args: String): Int {
+        var index = when (args) {
+            "cityRegistration" -> 0
+            "powerCar" -> 1
+            "driversCount" -> 2
+            "minAge" -> 3
+            "minExperience" -> 4
+            "yearsNotIncident" -> 5
+            else -> 0
+        }
+        return index
+    }
+
+
+    private fun initNextButton() {
+        binding.nextBt.setOnClickListener {
+            saveUserDataToModel(currentParameter)
+            if (idFragment < 5) {
+                idFragment++
+            } else {
+                idFragment = 0
+            }
+
+
+            initDataFragment(currentParameter)
+            currentParameter = changeCurrentParameterToIndex(idFragment)
             Log.e("cityRegistration", UserData.cityRegistration)
             Log.e("powerCar", UserData.powerCar)
             Log.e("minAge", UserData.minAge)
+
         }
     }
 
-    private fun saveUserDataToModel(args: String){
-        when(args){
-            "cityRegistration" -> UserData.cityRegistration = binding.enterUserDataEt.text.toString()
+    private fun saveUserDataToModel(args: String) {
+        when (args) {
+            "cityRegistration" -> UserData.cityRegistration =
+                binding.enterUserDataEt.text.toString()
             "powerCar" -> UserData.powerCar = binding.enterUserDataEt.text.toString()
             "driversCount" -> UserData.driversCount = binding.enterUserDataEt.text.toString()
             "minAge" -> UserData.minAge = binding.enterUserDataEt.text.toString()
             "minExperience" -> UserData.minExperience = binding.enterUserDataEt.text.toString()
-            "yearsNotIncident" -> UserData.yearsNotIncident = binding.enterUserDataEt.text.toString()
+            "yearsNotIncident" -> UserData.yearsNotIncident =
+                binding.enterUserDataEt.text.toString()
         }
     }
 
+    // Парсим данные и заполняем поля фрагмента
     private fun initDataFragment(args: String) {
         val data = UserData.getQuestionsDataMap().filter {
             it.key == args
