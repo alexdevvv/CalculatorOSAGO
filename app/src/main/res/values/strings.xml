@@ -13,10 +13,16 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="city_of_registaration">Город регистрации собственника</string>
+    <string name="hint_city_of_registaration">Введите город регистрации</string>
     <string name="power_car">Мощность автомобиля</string>
+    <string name="hint_power_car">Введите мощность авто</string>
     <string name="number_of_drivers">Сколько водителей</string>
+    <string name="hint_number_of_drivers">Введите к-во водителей</string>
     <string name="age_of_the_youngest_friver">Возраст младшего из водителей</string>
+    <string name="hint_age_of_the_youngest_friver">Введите возраст младшего воителя</string>
     <string name="min_experience_drivers">Минимальный стаж водителей</string>
+    <string name="hint_min_experience_drivers">Введите минимальный стаж</string>
     <string name="count_years_no_accidents">Сколько лет не было аварий</string>
+    <string name="hint_count_years_no_accidents">Введите сколько лет не было аварий</string>
     <string name="calculate_osago">Калькулятор ОСАГО</string>
 </resources>

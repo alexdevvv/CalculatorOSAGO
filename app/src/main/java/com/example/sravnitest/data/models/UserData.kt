@@ -1,4 +1,5 @@
 package com.example.sravnitest.data.models
+import com.example.sravnitest.data.models.FieldType.*
 
 object UserData {
     var cityRegistration: String = ""
@@ -17,27 +18,17 @@ object UserData {
         yearsNotIncident = ""
     }
 
-
-    fun fieldList(): List<Pair<String, String>> {
-        val list = mutableListOf<Pair<String, String>>()
-        list.add(Pair("cityRegistration", cityRegistration))
-        list.add(Pair("powerCar", powerCar))
-        list.add(Pair("driversCount", driversCount))
-        list.add(Pair("minAge", minAge))
-        list.add(Pair("minExperience", minExperience))
-        list.add(Pair("yearsNotIncident", yearsNotIncident))
+    // Метод для проверки заполненности полей
+    fun fieldList(): List<Pair<FieldType, String>> {
+        val list = mutableListOf<Pair<FieldType, String>>()
+        list.add(Pair(CITY_REGISTRATION, cityRegistration))
+        list.add(Pair(POWER_CAR, powerCar))
+        list.add(Pair(DRIVERS_COUNT, driversCount))
+        list.add(Pair(MIN_AGE, minAge))
+        list.add(Pair(MIN_EXPERIENCE, minExperience))
+        list.add(Pair(YEARS_NOT_INCIDENT, yearsNotIncident))
         return list
     }
 
-    fun getQuestionsDataMap(): Map<String, Pair<String, String>> {
-        val questionsDataMap = mapOf(
-            "cityRegistration" to Pair("Город регистрации собственника", "Введите город регистрации"),
-            "powerCar" to Pair("Мощность автомобиля", "Введите мощность авто"),
-            "driversCount" to Pair("Количество водителей", "Введите к-во водителей"),
-            "minAge" to Pair("Возраст мдладшего из водителей", "Введите возраст младшего воителя"),
-            "minExperience" to Pair("Минимальный стаж вождения", "Введите минимальный стаж"),
-            "yearsNotIncident" to Pair("Сколько лет не было аварий", "Введите сколько лет не было аварий"),
-        )
-        return questionsDataMap
-    }
+
 }
