@@ -28,7 +28,7 @@ class InputDialogFragment : Fragment(R.layout.fragment_input_dialog) {
     }
 
     // Определяем фрагмент по индексу
-    fun changeCurrentParameterToIndex(index: Int): String {
+    private fun changeCurrentParameterToIndex(index: Int): String {
         var args = when (index) {
             0 -> "cityRegistration"
             1 -> "powerCar"
@@ -42,7 +42,7 @@ class InputDialogFragment : Fragment(R.layout.fragment_input_dialog) {
     }
 
     // Определяем индекс в зависимости от пришедшего аргумента
-    fun changeIndexToCurrentParameter(args: String): Int {
+    private fun changeIndexToCurrentParameter(args: String): Int {
         var index = when (args) {
             "cityRegistration" -> 0
             "powerCar" -> 1
@@ -65,26 +65,23 @@ class InputDialogFragment : Fragment(R.layout.fragment_input_dialog) {
                 idFragment = 0
             }
 
-
             initDataFragment(currentParameter)
             currentParameter = changeCurrentParameterToIndex(idFragment)
-            Log.e("cityRegistration", UserData.cityRegistration)
-            Log.e("powerCar", UserData.powerCar)
-            Log.e("minAge", UserData.minAge)
+//            Log.e("cityRegistration", UserData.cityRegistration)
+//            Log.e("powerCar", UserData.powerCar)
+//            Log.e("minAge", UserData.minAge)
 
         }
     }
 
     private fun saveUserDataToModel(args: String) {
         when (args) {
-            "cityRegistration" -> UserData.cityRegistration =
-                binding.enterUserDataEt.text.toString()
+            "cityRegistration" -> UserData.cityRegistration = binding.enterUserDataEt.text.toString()
             "powerCar" -> UserData.powerCar = binding.enterUserDataEt.text.toString()
             "driversCount" -> UserData.driversCount = binding.enterUserDataEt.text.toString()
             "minAge" -> UserData.minAge = binding.enterUserDataEt.text.toString()
             "minExperience" -> UserData.minExperience = binding.enterUserDataEt.text.toString()
-            "yearsNotIncident" -> UserData.yearsNotIncident =
-                binding.enterUserDataEt.text.toString()
+            "yearsNotIncident" -> UserData.yearsNotIncident = binding.enterUserDataEt.text.toString()
         }
     }
 
